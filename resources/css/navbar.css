@@ -1,35 +1,59 @@
+@font-face {
+    font-family: 'Britney1';
+    src: url('/fonts/Britney-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Britney2';
+    src: url('/fonts/Britney-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Britney3';
+    src: url('/fonts/Britney-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Britney4';
+    src: url('/fonts/Britney-Ultra.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 75px;
-
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
     padding: 0 50px;
-
-    z-index: 15;
-
-    background: transparent;
-    transition: background-color 0.4s ease;
+    z-index: 100;
+    background-color: gray;
+    transition: background-color 0.1s ;
 }
 
 .navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .nav-left {
     width: 45%;
-
     display: flex;
     align-items: center;
-
     gap: 40px;
 }
+.nav-left a{
+    color: rgb(253, 253, 217);
 
+}
 .nav-right {
     width: 45%;
 
@@ -41,16 +65,27 @@
 }
 
 .navbar a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
+
+.navbar a,
+.search-icon,
+.login-icon {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-left a {
+    font-size: 10px;}
+
 
 .search-icon {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -74,19 +109,13 @@
     position: fixed;
     top: 70px;
     left: 0;
-
     width: 100%;
-
-    background-color: rgba(0, 0, 0, 0.9);
-
+    background-color: transparent;
     max-height: 0;
     overflow: hidden;
-
     display: flex;
     flex-direction: column;
-
     z-index: 14;
-
     transition: max-height 0.4s ease;
 }
 
@@ -114,7 +143,9 @@
 
         justify-content: flex-end;
     }
-
+    .mobile-menu {
+        top: 70px;
+    }
     .nav-left {
         display: none;
     }
@@ -126,9 +157,6 @@
     }
 
     .catalogues-link {
-        display: none;
-    }
-    .nav-left {
         display: none;
     }
 
