@@ -95,7 +95,7 @@
             width: 100%;
             min-height: 100vh;
 
-            background-color: #F5EFE1;
+            background-color: #f4efe4;
 
             display: flex;
             flex-direction: column;
@@ -308,7 +308,7 @@
         }
 
         .sell-header h2 {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Dancing Script", cursive;
             font-size: 48px;
             font-weight: 600;
             color: #9b4037;
@@ -518,7 +518,7 @@
         }
 
         .contact-right h2 {
-            font-family: "Cormorant Garamond", serif;
+            font-family: "Dancing Script", cursive;
             font-size: 42px;
             font-weight: 600;
             color: #9b4037;
@@ -583,7 +583,126 @@
 
         .contact-btn:hover {
             background-color: rgba(140, 129, 117, 0.12);
-             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .location-section {
+            width: 100%;
+            background-color: #f4efe4;
+            padding: 90px 50px;
+            box-sizing: border-box;
+        }
+
+        .location-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .location-info {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            border-right: 1px solid #8c8175;
+            padding-right: 40px;
+            box-sizing: border-box;
+        }
+
+        .info-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .info-label {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #1f1b19;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            color: #5a524c;
+            line-height: 1.5;
+            text-decoration: none;
+            margin: 0;
+            transition: color 0.3s ease;
+        }
+
+        a.info-value:hover {
+            color: #9b4037;
+        }
+
+        .info-with-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-with-icon img {
+            flex-shrink: 0;
+            opacity: 0.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 18px;
+            margin-top: 4px;
+        }
+
+        .social-link {
+            color: #1f1b19;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-link:hover {
+            color: #9b4037;
+            transform: translateY(-2px);
+        }
+
+        .location-map {
+            width: 70%;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .map-card {
+            display: block;
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        .map-card img {
+            width: 100%;
+            height: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .map-card:hover img {
+            transform: scale(1.5);
         }
 
         @media (max-width: 900px) {
@@ -618,7 +737,30 @@
 
             .sell-things {
                 padding: 60px 25px;
-                background-color: #9aa7ba;
+                background-color: #faf9f6;
+            }
+
+            .home-desc {
+                padding: 45px 25px 45px;
+            }
+
+            .desc-left img {
+                width: 95%;
+                max-width: 520px;
+            }
+
+            .tile-separator img {
+                height: 42px;
+            }
+
+            .marquee-strip {
+                padding: 8px 0;
+            }
+
+            .marquee-track span {
+                font-size: 11px;
+                letter-spacing: 2px;
+                padding-right: 22px;
             }
 
             .contact-section {
@@ -630,14 +772,35 @@
                 width: 100%;
                 padding: 40px 25px;
             }
+
+            .location-section {
+                padding: 60px 25px;
+            }
+
+            .location-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .location-info {
+                border-right: none;
+                border-bottom: 1px solid #8c8175;
+                padding-right: 0;
+                padding-bottom: 40px;
+                width: 100%;
+            }
+
+            .location-map {
+                width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
 
             .hero {
                 background-image: url('/images/mainbg2.png');
-                background-size: 100% auto;
-                background-position: top center;
+                background-size: cover;
+                background-position: center;
             }
 
             .overlay-image {
@@ -657,14 +820,18 @@
                 padding: 0 10px;
             }
 
+            .desc-gallery-tagline {
+                font-size: 22px;
+            }
+
         }
 
         @media (max-width: 480px) {
 
             .hero {
                 background-image: url('/images/mainbg3.png');
-                background-size: 100% auto;
-                background-position: top center;
+                background-size: cover;
+                background-position: center;
             }
 
             .overlay-image {
@@ -686,6 +853,35 @@
                 font-size: 18px;
                 padding: 0 20px;
                 margin-top: 5px;
+            }
+
+            .home-desc {
+                padding: 35px 18px 35px;
+            }
+
+            .desc-left img {
+                width: 95%;
+                max-width: 380px;
+            }
+
+            .desc-gallery-tagline {
+                font-size: 18px;
+                line-height: 1.35;
+                padding: 0 5px;
+            }
+
+            .tile-separator img {
+                height: 30px;
+            }
+
+            .marquee-strip {
+                padding: 5px 0;
+            }
+
+            .marquee-track span {
+                font-size: 9px;
+                letter-spacing: 1.5px;
+                padding-right: 16px;
             }
 
         }
@@ -906,6 +1102,51 @@
         </div>
     </div>
 
+    <div class="location-section">
+        <div class="location-container">
+            <div class="location-info">
+                <div class="info-group">
+                    <span class="info-label">EMAIL</span>
+                    <a href="mailto:abcmarble.butwal@gmail.com" class="info-value">abcmarble.butwal@gmail.com</a>
+                </div>
+
+                <div class="info-group">
+                    <span class="info-label">PHONE</span>
+                    <a href="tel:071437434" class="info-value">071 437434</a>
+                </div>
+
+                <div class="info-group">
+                    <span class="info-label">ADDRESS</span>
+                    <p class="info-value">Rajmarga Chauraha , Butwal ,Nepal</p>
+                </div>
+
+                <div class="info-group">
+                    <span class="info-label">SOCIAL</span>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/30/facebook-new.png" alt="Facebook">
+                        </a>
+                        <a href="tel:071437434" class="social-link">
+                            <img width="26" height="26" src="https://img.icons8.com/ios-glyphs/30/phone--v1.png" alt="Phone">
+                        </a>
+                        <a href="mailto:abcmarble.butwal@gmail.com" class="social-link">
+                            <img width="26" height="26" src="https://img.icons8.com/material-rounded/24/mail.png" alt="Email">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-map">
+                <a href="https://www.google.com/maps/place/ABC+Sanitation+and+Marble/@27.6852572,83.4551418,16z/data=!4m16!1m9!4m8!1m0!1m6!1m2!1s0x399686877b31ad15:0xdab32e26285c2a10!2sABC+Sanitation+and+Marble,+MFP7%2B4V3,+Butwal,+Lumbini+Province+32907!2m2!1d83.4646675!2d27.6852591!3m5!1s0x399686877b31ad15:0xdab32e26285c2a10!8m2!3d27.6852591!4d83.4646675!16s%2Fg%2F11fzf4rn7b?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="map-card">
+                    <img src="/images/map.png" alt="ABC Sanitation and Marble Map Location">
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script>
 
         const text = "that adorn your space";
@@ -1026,7 +1267,34 @@
             mobileMenu.classList.toggle("open");
         });
     </script>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p>hey</p>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="/images/somany-footer.png" alt="ABC Sanitation and Marble" class="footer-logo">
+                <p class="footer-tagline">Quality tiles, marble & building solutions<br>rooted in Butwal, built for Nepal.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="/tiles">Tiles</a>
+                <a href="/bathware">Bathware</a>
+                <a href="/building-solutions">Building Solutions</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Catalogues</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2025 ABC Sanitation and Marble. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 
