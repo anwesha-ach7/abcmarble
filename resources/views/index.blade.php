@@ -11,6 +11,18 @@
  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
     <style>
 
         * {
@@ -76,9 +88,233 @@
 
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
         }
-        .home-desc{
-            background-color: #F5F0E1;
+        .home-desc {
+            width: 100%;
+            min-height: 100vh;
+
+            background-color: #f3ebd7;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            box-sizing: border-box;
+            padding: 60px 50px 70px;
+
+            gap: 60px;
         }
+
+        /* TOP ROW (LEFT & RIGHT COLUMNS) */
+        .desc-row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        /* LEFT SIDE */
+
+        .desc-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .desc-left img {
+            width: 100%;
+            max-width: 620px;
+            height: auto;
+
+            display: block;
+        }
+
+
+        /* RIGHT SIDE */
+
+        .desc-right {
+            width: 48%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            box-sizing: border-box;
+
+            padding-right: 35px;
+        }
+
+
+        /* MAIN HEADING */
+
+        .desc-right h2 {
+            margin: 0 0 10px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 38px;
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            color: #1f1b19;
+        }
+
+
+        /* SCRIPT TAGLINE */
+
+        .desc-right h3 {
+            margin: 0 0 28px;
+
+            font-family: "Dancing Script", cursive;
+
+            font-size: 22px;
+            font-weight: 500;
+
+            line-height: 1.35;
+
+            color: #9b4037;
+        }
+
+
+        /* PARAGRAPHS */
+
+        .desc-text {
+            width: 100%;
+        }
+
+        .desc-text p {
+            margin: 0 0 20px;
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 12px;
+            font-weight: 400;
+
+            line-height: 1.45;
+
+            color: #403a37;
+        }
+
+
+        /* EXPLORE BUTTON */
+
+        .explore-btn {
+            width: 100%;
+            height: 50px;
+
+            margin-top: 3px;
+
+            border: 2px solid #8c8175;
+
+            box-sizing: border-box;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 20px;
+            font-weight: 400;
+
+            color: #302b28;
+
+            background: transparent;
+
+            transition: 0.3s ease;
+        }
+
+
+        .explore-btn span {
+            margin-left: 7px;
+
+            font-size: 24px;
+        }
+
+
+        .explore-btn:hover {
+            background-color: #e9dfc9;
+        }
+
+        /* BOTTOM ROW: GALLERY STRIP */
+        .desc-gallery {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .desc-gallery-tagline {
+            font-family: "Dancing Script", cursive;
+            font-size: 26px;
+            font-weight: 600;
+            color: #9b4037;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .desc-gallery-frame {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px;
+            border: 2px solid #8c8175;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.25);
+            box-sizing: border-box;
+        }
+
+        .desc-gallery-item {
+            flex: 1;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .desc-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .desc-gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        @media (max-width: 900px) {
+            .desc-row {
+                flex-direction: column;
+            }
+
+            .desc-left,
+            .desc-right {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .desc-gallery-frame {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .desc-gallery-item {
+                flex: 1 1 calc(33.333% - 14px);
+                min-width: 130px;
+                height: 180px;
+            }
+        }
+
         @media (max-width: 768px) {
 
             .hero {
@@ -206,9 +442,80 @@
     </section>
 
     <div class="home-desc">
-        <img src=""
+        <!-- TOP ROW: Left Image & Right Description -->
+        <div class="desc-row">
+            <div class="desc-left">
+                <img src="/images/home-desc.png" alt="ABC Sanitation and Marble">
+            </div>
+
+            <div class="desc-right">
+
+                <h2>ABC Sanitation and Marble</h2>
+
+                <h3>
+                    we transform spaces with elegant tiles, premium
+                    bathware and complete building solutions
+                </h3>
+
+                <div class="desc-text">
+
+                    <p>
+                        We are a Butwal-based supplier of quality tiles, marble,
+                        sanitaryware, bathware, and building solutions, serving homes,
+                        businesses, and construction projects across the region. We work
+                        with established manufacturers such as Somany Ceramics,
+                        bringing a wide selection of their tiles and surface solutions
+                        to customers in Nepal through our local presence.
+                    </p>
+
+                    <p>
+                        Our range includes elegant floor and wall tiles, durable surfaces,
+                        bathroom fittings, sanitaryware, and other products designed to
+                        combine functionality with contemporary design. Whether it is a
+                        new home, a renovation, a commercial space, or a larger
+                        construction project, we aim to provide reliable products that suit
+                        different styles, requirements, and budgets.
+                    </p>
+
+                    <p>
+                        With a focus on quality materials, modern designs, and dependable
+                        service, we help customers find the right products to create spaces
+                        that are practical, comfortable, and visually appealing.
+                    </p>
+
+                </div>
+
+                <a href="#" class="explore-btn">
+                    Explore <span>→</span>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- BOTTOM ROW: Gallery Strip -->
+        <div class="desc-gallery">
+            <p class="desc-gallery-tagline">
+                our curated creations are timeless, elegant, sustainable & crafted with love
+            </p>
+            <div class="desc-gallery-frame">
+                <div class="desc-gallery-item">
+                    <img src="/images/b1.jpeg" alt="Tile Collection 1">
+                </div>
+                <div class="desc-gallery-item">
+                    <img src="/images/b2.jpeg" alt="Tile Collection 2">
+                </div>
+                <div class="desc-gallery-item">
+                    <img src="/images/b3.jpeg   " alt="Tile Collection 3">
+                </div>
+                <div class="desc-gallery-item">
+                    <img src="/images/b4.jpeg " alt="Tile Collection 4">
+                </div>
+                <div class="desc-gallery-item">
+                    <img src="/images/b5.jpeg" alt="Tile Collection 5">
+                </div>
+            </div>
+        </div>
     </div>
-         
     <script>
 
         const text = "that adorn your space";
