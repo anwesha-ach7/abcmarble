@@ -68,13 +68,16 @@
             text-align: center;
 
             width: 90%;
-            font-family: 'Britney4', sans-serif;
+            font-family: "Montserrat", serif;
+            font-weight: 200;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.67);
         }
 
         .hero-text h1 {
             color: white;
             font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
         }
 
         .hero-text p {
@@ -92,7 +95,7 @@
             width: 100%;
             min-height: 100vh;
 
-            background-color: #f3ebd7;
+            background-color: #F5EFE1;
 
             display: flex;
             flex-direction: column;
@@ -125,7 +128,7 @@
         }
 
         .desc-left img {
-            width: 100%;
+            width: 80%;
             max-width: 620px;
             height: auto;
 
@@ -239,7 +242,7 @@
 
 
         .explore-btn:hover {
-            background-color: #e9dfc9;
+            background-color: rgba(140, 129, 117, 0.12);
         }
 
         /* BOTTOM ROW: GALLERY STRIP */
@@ -292,6 +295,297 @@
             transform: scale(1.06);
         }
 
+        .sell-things {
+            width: 100%;
+            background-color: #faf9f6;
+            padding: 60px 50px 80px;
+            box-sizing: border-box;
+        }
+
+        .sell-header {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        .sell-header h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 48px;
+            font-weight: 600;
+            color: #9b4037;
+            margin-bottom: 12px;
+        }
+
+        .sell-header p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            color: #5a524c;
+            line-height: 1.6;
+            max-width: 850px;
+        }
+
+        .sell-grid {
+            width: 100%;
+            display: flex;
+            gap: 30px;
+        }
+
+        .sell-card {
+            flex: 1;
+            background-color: #f2f2f0;
+            border-radius: 24px;
+            padding: 18px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sell-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .sell-card-img {
+            width: 100%;
+            height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .sell-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .sell-card:hover .sell-card-img img {
+            transform: scale(1.08);
+        }
+
+        .sell-card-content {
+            padding: 22px 8px 12px 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sell-card-content h3 {
+            font-family: "Dancing Script", cursive;
+            font-size: 32px;
+            font-weight: 600;
+            color: #9b4037;
+            margin: 0;
+        }
+
+        .sell-card-content p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #403a37;
+            margin: 0;
+        }
+
+        .sell-arrow {
+            display: inline-block;
+            margin-left: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .sell-card:hover .sell-arrow {
+            transform: translateX(4px);
+        }
+
+        .statement-banner {
+            width: 100%;
+            background-color: #f4efe4;
+            padding: 70px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            gap: 15px;
+        }
+
+        .statement-tag {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #9b4037;
+            text-transform: uppercase;
+        }
+
+        .statement-banner h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 40px;
+            font-weight: 500;
+            color: #1f1b19;
+            max-width: 800px;
+            line-height: 1.3;
+            margin: 5px 0;
+        }
+
+        .statement-banner h2 span {
+            color: #9b4037;
+            font-weight: 600;
+        }
+
+        .tile-separator {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .tile-separator img {
+            width: 100%;
+            height: 65px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .marquee-strip {
+            width: 100%;
+            overflow: hidden;
+            background-color: #e3cce6;
+            border-top: 1px solid #8c8175;
+            border-bottom: 1px solid #8c8175;
+            padding: 12px 0;
+            display: flex;
+            white-space: nowrap;
+        }
+
+        .marquee-track {
+            display: flex;
+            flex-shrink: 0;
+            white-space: nowrap;
+            animation: marqueeScroll 20s linear infinite;
+        }
+
+        .marquee-track span {
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #302b28;
+            text-transform: uppercase;
+            padding-right: 30px;
+        }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .contact-section {
+            width: 100%;
+            display: flex;
+            background-color: #faf9f6;
+            min-height: 540px;
+        }
+
+        .contact-left {
+            width: 50%;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .contact-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contact-right {
+            width: 50%;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+            background-color: #faf9f6;
+        }
+
+        .contact-right h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: #9b4037;
+            margin-bottom: 25px;
+        }
+
+        .contact-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-input,
+        .contact-textarea {
+            width: 100%;
+            border: 1px solid #8c8175;
+            background: transparent;
+            padding: 14px 16px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #1f1b19;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .contact-input::placeholder,
+        .contact-textarea::placeholder {
+            color: #5a524c;
+        }
+
+        .contact-input:focus,
+        .contact-textarea:focus {
+            border-color: #1f1b19;
+        }
+
+        .contact-textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-btn {
+            width: 100%;
+            height: 50px;
+            border: 2px solid #8c8175;
+            background: transparent;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #302b28;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .contact-btn:hover {
+            background-color: rgba(140, 129, 117, 0.12);
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
         @media (max-width: 900px) {
             .desc-row {
                 flex-direction: column;
@@ -312,6 +606,29 @@
                 flex: 1 1 calc(33.333% - 14px);
                 min-width: 130px;
                 height: 180px;
+            }
+
+            .sell-grid {
+                flex-direction: column;
+            }
+
+            .sell-card-img {
+                height: 280px;
+            }
+
+            .sell-things {
+                padding: 60px 25px;
+                background-color: #9aa7ba;
+            }
+
+            .contact-section {
+                flex-direction: column;
+            }
+
+            .contact-left,
+            .contact-right {
+                width: 100%;
+                padding: 40px 25px;
             }
         }
 
@@ -385,11 +702,11 @@
 
             <div class="nav-left">
 
-                <a href="#">Tiles</a>
+                <a href="/tiles">Tiles</a>
 
-                <a href="#">Bathware</a>
+                <a href="/bathware">Bathware</a>
 
-                <a href="#">Building Solutions</a>
+                <a href="/building-solutions">Building Solutions</a>
 
             </div>
 
@@ -412,9 +729,9 @@
             </div>
 
             <div class="mobile-menu" id="mobileMenu">
-                <a href="#">Tiles</a>
-                <a href="#">Bathware</a>
-                <a href="#">Building Solutions</a>
+                <a href="/tiles">Tiles</a>
+                <a href="/bathware">Bathware</a>
+                <a href="/building-solutions">Building Solutions</a>
                 <a href="#">Catalogues</a>
             </div>
 
@@ -516,6 +833,79 @@
             </div>
         </div>
     </div>
+
+    <div class="sell-things">
+        <div class="sell-header">
+            <h2>Our Offerings</h2>
+            <p>Discover the building blocks of enduring, inspiring spaces with our range of tiles, bathware, and building solutions.</p>
+        </div>
+
+        <div class="sell-grid">
+            <a href="/tiles" class="sell-card">
+                <div class="sell-card-img">
+                    <img src="/images/tiles.webp" alt="Explore Tiles">
+                </div>
+                <div class="sell-card-content">
+                    <h3>Explore Tiles</h3>
+                    <p>Our tile collections, to fulfil your wall, floor or outdoor requirements. <span class="sell-arrow">→</span></p>
+                </div>
+            </a>
+
+            <a href="/bathware" class="sell-card">
+                <div class="sell-card-img">
+                    <img src="/images/bathwares.webp" alt="Explore Bathware">
+                </div>
+                <div class="sell-card-content">
+                    <h3>Explore Bathware</h3>
+                    <p>Our sanitaryware and vanity alternatives, along with fittings & fixtures. <span class="sell-arrow">→</span></p>
+                </div>
+            </a>
+
+            <a href="/building-solutions" class="sell-card">
+                <div class="sell-card-img">
+                    <img src="/images/bs.webp" alt="Explore Building Solutions">
+                </div>
+                <div class="sell-card-content">
+                    <h3>Explore Building Solutions</h3>
+                    <p>Our range of Building solutions takes care of all your construction needs. <span class="sell-arrow">→</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="statement-banner">
+        <span class="statement-tag">ABC Sanitation and Marble</span>
+        <h2><span>TRANSFORM</span> your space and craft<br>the perfect home.</h2>
+    </div>
+
+    <div class="tile-separator">
+        <img src="/images/tiletile.png" alt="Tiles Separator">
+    </div>
+
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>• PREMIUM TILES • LUXURY BATHWARE • BUTWAL • PREMIUM TILES • LUXURY BATHWARE • BUTWAL • PREMIUM TILES • LUXURY BATHWARE • BUTWAL • PREMIUM TILES • LUXURY BATHWARE • BUTWAL •</span>
+            <span>• PREMIUM TILES • LUXURY BATHWARE • BUTWAL • PREMIUM TILES • LUXURY BATHWARE • BUTWAL • PREMIUM TILES • LUXURY BATHWARE • BUTWAL • PREMIUM TILES • LUXURY BATHWARE • BUTWAL •</span>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-left">
+            <img src="/images/contact-us.png" alt="Contact ABC Marble">
+        </div>
+
+        <div class="contact-right">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" class="contact-input" placeholder="NAME" required>
+                <input type="tel" class="contact-input" placeholder="PHONE">
+                <input type="email" class="contact-input" placeholder="EMAIL" required>
+                <textarea class="contact-textarea" placeholder="MESSAGE" required></textarea>
+                <button type="submit" class="contact-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <script>
 
         const text = "that adorn your space";
