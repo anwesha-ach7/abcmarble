@@ -27,65 +27,6 @@
             flex-direction: column;
         }
 
-        .header-bar {
-            background-color: #111827;
-            width: 100%;
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 50px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-bar .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
-
-        .header-bar .nav-left a {
-            color: #e2e8f0;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .header-bar .nav-left a.active,
-        .header-bar .nav-left a:hover {
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        .header-bar .nav-brand img {
-            height: 34px;
-            width: auto;
-            display: block;
-        }
-
-        .header-bar .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .header-bar .nav-right a {
-            color: #e2e8f0;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .header-bar .icon-btn {
-            color: #ffffff;
-            font-size: 19px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
         .products-hero {
             padding: 60px 40px 40px;
             text-align: center;
@@ -242,13 +183,6 @@
         }
 
         @media (max-width: 768px) {
-            .header-bar {
-                padding: 0 20px;
-            }
-            .header-bar .nav-left,
-            .header-bar .nav-right a {
-                display: none;
-            }
             .product-grid {
                 padding: 0 20px;
                 grid-template-columns: 1fr;
@@ -257,23 +191,31 @@
     </style>
 </head>
 <body>
-    <header class="header-bar">
+    <nav class="inner-navbar">
         <div class="nav-left">
-            <a href="/tiles" class="active">Tiles</a>
+            <a href="/tiles" style="font-weight: 600;">Tiles</a>
             <a href="/bathware">Bathware</a>
             <a href="/building-solutions">Building Solutions</a>
         </div>
-        <div class="nav-brand">
-            <a href="/">
-                <img src="/images/somany-nobg.png" alt="Somany">
-            </a>
-        </div>
+
+        <a href="/">
+            <img src="/images/somany-nobg.png" class="inner-nav-logo" alt="Somany">
+        </a>
+
         <div class="nav-right">
-            <a href="#">Catalogues</a>
-            <span class="icon-btn"><i class="fi fi-rr-search"></i></span>
-            <span class="icon-btn"><i class="fi fi-sr-user"></i></span>
+            <a href="#" class="catalogues-link">Catalogues</a>
+            <span class="search-icon"><i class="fi fi-rr-search"></i></span>
+            <span class="login-icon"><i class="fi fi-sr-user"></i></span>
+            <div class="hamburger" id="hamburger"><i class="fi fi-rr-menu-burger"></i></div>
         </div>
-    </header>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/tiles">Tiles</a>
+            <a href="/bathware">Bathware</a>
+            <a href="/building-solutions">Building Solutions</a>
+            <a href="#">Catalogues</a>
+        </div>
+    </nav>
 
     <main class="products-hero">
         <h1>Tiles Collection</h1>
@@ -368,5 +310,14 @@
             <p>© 2025 ABC Sanitation and Marble. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>

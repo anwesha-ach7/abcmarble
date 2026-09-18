@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiles - ABC Sanitation and Marble</title>
+
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+ <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+ <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
     <style>
         * {
             margin: 0;
@@ -34,42 +35,17 @@
             overflow-x: hidden;
             /* No padding-top — inner-navbar is NOT fixed */
         }
-
-        .page-title-section {
-            width: 100%;
-            text-align: center;
-            padding: 35px 20px 20px;
+        .nav-left a, .nav-right a{
+            font-family: 'Times New Roman', Times, serif;
         }
 
-        .page-title-section h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 58px;
-            font-weight: 600;
-            color: #9b4037;
-            letter-spacing: 1px;
-            margin: 0;
-        }
-
-        .hero-banner-section {
-            width: 100%;
-            padding: 0 50px;
-            margin: 0 auto 45px;
-            box-sizing: border-box;
-        }
-        .hero-banner-card img {
-            width: 70%;
-            height: auto;
-            max-height: 560px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-        }
         .carousel-outer-wrapper {
             width: 100%;
             padding: 0 50px;
             margin: 0 auto 60px;
             position: relative;
             box-sizing: border-box;
+            top: 30px;
         }
 
         .carousel-viewport {
@@ -516,6 +492,147 @@
         .acc-thumb-col:hover img {
             transform: scale(1.08);
         }
+        .tiles-landing-hero {
+            position: relative;
+            width: 100%;
+            height: 650px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .tiles-landing-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .tiles-landing-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20, 15, 10, 0.58) 0%,
+                    rgba(20, 15, 10, 0.25) 45%,
+                    rgba(20, 15, 10, 0.08) 100%
+                );
+        }
+
+        .tiles-landing-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 70px;
+            box-sizing: border-box;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .tiles-eyebrow {
+            margin: 0 0 15px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .tiles-landing-content h1 {
+            margin: 0;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 100px;
+            font-weight: 500;
+            line-height: 0.9;
+            letter-spacing: -2px;
+        }
+
+        .tiles-hero-description {
+            margin: 22px 0 30px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .tiles-hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 23px;
+            border: 1px solid rgba(255,255,255,0.8);
+            color: #ffffff;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .tiles-hero-button span {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .tiles-hero-button:hover {
+            background: #ffffff;
+            color: #1c1a18;
+        }
+
+        @media (max-width: 768px) {
+
+            .tiles-landing-hero {
+                height: 560px;
+            }
+
+            .tiles-landing-content {
+                padding: 0 30px;
+            }
+
+            .tiles-landing-content h1 {
+                font-size: 72px;
+            }
+
+            .tiles-hero-description {
+                font-size: 23px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .tiles-landing-hero {
+                height: 500px;
+            }
+
+            .tiles-landing-content {
+                padding: 0 22px;
+            }
+
+            .tiles-eyebrow {
+                font-size: 10px;
+                letter-spacing: 3px;
+            }
+
+            .tiles-landing-content h1 {
+                font-size: 58px;
+            }
+
+            .tiles-hero-description {
+                font-size: 20px;
+                margin: 15px 0 25px;
+            }
+
+        }
 
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 1024px) {
@@ -597,20 +714,34 @@
             <a href="#">Catalogues</a>
         </div>
     </nav>
+<section class="tiles-landing-hero">
 
-    <!-- ==================== PAGE MAIN TITLE ==================== -->
-    <section class="page-title-section">
+    <img
+        src="/images/tiles-hero.png"
+        alt="Luxury living room with tiles"
+        class="tiles-landing-image"
+    >
+
+    <div class="tiles-landing-overlay"></div>
+
+    <div class="tiles-landing-content">
+
+        <p class="tiles-eyebrow">SOMANY</p>
+
         <h1>Tiles</h1>
-    </section>
 
-    <!-- ==================== MAIN LIVING ROOM HERO ==================== -->
-    <section class="hero-banner-section">
-        <div class="hero-banner-card">
-            <img src="/images/tiles-hero-exact.png" alt="Luxury Living Room Floor Tiles">
-        </div>
-    </section>
+        <p class="tiles-hero-description">
+            Surfaces that transform spaces.
+        </p>
 
-    <!-- ==================== FULL SPREAD 3-ACROSS CAROUSEL ==================== -->
+        <a href="#tile-categories" class="tiles-hero-button">
+            Explore Collections
+            <span>↗</span>
+        </a>
+
+    </div>
+
+</section>
     <section class="carousel-outer-wrapper">
         <button class="carousel-nav-btn prev" id="carouselPrev" aria-label="Previous Tile">
             <i class="fi fi-rr-angle-left"></i>
@@ -712,7 +843,6 @@
         </div>
     </section>
 
-    <!-- ==================== EXACT HOMEPAGE SITE FOOTER ==================== -->
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-brand">
@@ -1005,6 +1135,12 @@
 
         // Initial render
         renderAccordion('application');
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
     </script>
 </body>
 </html>

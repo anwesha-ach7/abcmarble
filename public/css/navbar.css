@@ -317,9 +317,10 @@
 
 .inner-nav-logo {
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    height: 38px;
+    transform: translate(-50%, -50%);
+    height: 82px;
     width: auto;
     display: block;
     pointer-events: auto;
@@ -382,7 +383,7 @@
     }
 
     .inner-nav-logo {
-        height: 30px;
+        height: 54px;
     }
 
     .inner-navbar .nav-left {
@@ -436,7 +437,7 @@
     }
 
     .inner-nav-logo {
-        height: 26px;
+        height: 44px;
     }
 
     .inner-navbar .nav-right {
