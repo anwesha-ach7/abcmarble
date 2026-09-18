@@ -291,3 +291,159 @@
         font-size: 9.5px !important;
     }
 }
+
+/* ====================================================================================
+   INNER PAGE NAVBAR
+   Use on /tiles, /bathware, /building-solutions, /tile-products — any page that is
+   NOT the homepage. NOT fixed/sticky. Permanently dark (#1a1a1a). Logo centred.
+   Same font family, size, weight as the homepage .navbar.scrolled state.
+   Usage: <nav class="inner-navbar"> ... </nav>
+          <img src="/images/somany-nobg.png" class="inner-nav-logo">
+   ==================================================================================== */
+
+.inner-navbar {
+    width: 100%;
+    height: 75px;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.inner-nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 38px;
+    width: auto;
+    display: block;
+    pointer-events: auto;
+}
+
+.inner-navbar .nav-left {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.inner-navbar .nav-right {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+}
+
+.inner-navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    transition: opacity 0.2s ease;
+}
+
+.inner-navbar a:hover {
+    opacity: 0.75;
+}
+
+.inner-navbar .search-icon,
+.inner-navbar .login-icon {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.inner-navbar .hamburger {
+    display: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.inner-navbar .mobile-menu {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .inner-navbar {
+        height: 70px;
+        padding: 0 25px;
+        justify-content: flex-end;
+    }
+
+    .inner-nav-logo {
+        height: 30px;
+    }
+
+    .inner-navbar .nav-left {
+        display: none;
+    }
+
+    .inner-navbar .catalogues-link {
+        display: none;
+    }
+
+    .inner-navbar .nav-right {
+        width: auto;
+        gap: 22px;
+    }
+
+    .inner-navbar .hamburger {
+        display: flex;
+    }
+
+    .inner-navbar .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(18, 18, 18, 0.98);
+        backdrop-filter: blur(10px);
+        max-height: 0;
+        overflow: hidden;
+        z-index: 99;
+        transition: max-height 0.35s ease;
+    }
+
+    .inner-navbar .mobile-menu.open {
+        max-height: 280px;
+    }
+
+    .inner-navbar .mobile-menu a {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 16px 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .inner-navbar {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .inner-nav-logo {
+        height: 26px;
+    }
+
+    .inner-navbar .nav-right {
+        gap: 18px;
+    }
+
+    .inner-navbar .mobile-menu {
+        top: 65px;
+    }
+}
